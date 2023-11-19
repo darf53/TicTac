@@ -2,8 +2,8 @@
 
 ** setup project
 
-- create gitHub repository
-- do the initial commit
+- create gitHub repository - DONE
+- do the initial commit - DONE
 
 ** investigate boiler plate code for TDD
 

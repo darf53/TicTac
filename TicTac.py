@@ -24,7 +24,7 @@ def print_board(boardpositions):
         for j in range(5):
             board_string+=''.join(board_print[i][j])
         board_string+="\n"
-    print(board_string)
+    # print(board_string)
 
     # return the result
     return board_string
@@ -32,18 +32,19 @@ def print_board(boardpositions):
 def test_board(boardpositions):
     for i in range(3):
         if boardpositions[0][i] == boardpositions[1][i] == boardpositions[2][i] != "":
-            print("Vertical win")
+            # print("Vertical win")
             return("Player {} won!".format(boardpositions[0][i]))
         
     for i in range(3):
         if boardpositions[i][0] == boardpositions[i][1] == boardpositions[i][2] != "":
-            print("Horizontal win")
+            # print("Horizontal win")
             return ("Player {} won!".format(boardpositions[i][0]))
         
 
-    if boardpositions[0][0] == boardpositions[1][1] == boardpositions[2][2] != "":
-        print("Diagonal Win")
-        return ("Player {} won!".format(boardpositions[i][i]))
+    if (boardpositions[0][0] == boardpositions[1][1] == boardpositions[2][2] != "") or \
+       (boardpositions[0][2] == boardpositions[1][1] == boardpositions[2][0] != ""):
+        # print("Diagonal Win")
+        return ("Player {} won!".format(boardpositions[1][1]))
 
 print_board([["","",""],["","",""],["","",""]])
 print_board([["","","O"],["X","O",""],["O","","X"]])

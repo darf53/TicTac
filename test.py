@@ -13,6 +13,8 @@ class TestBoard(unittest.TestCase):
     def test_OwonHoriz(self):
         self.assertEqual(test_board([["X","","X"],["O","O","O"],["X","",""]]), "Player O won!", "Should declare player O won the game")
 
+    def test_XwonDiagonal(self):
+        self.assertEqual(test_board([["X","",""],["O","X",""],["O","","X"]]), "Player X won!", "Should declare player X won the game with a diagonal line")
 
 if __name__ == '__main__':
     unittest.main()

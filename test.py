@@ -17,7 +17,7 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(test_board([["X","",""],["O","X",""],["O","","X"]]), "Player X won!", "Should declare player X won the game with a diagonal line")
 
     def test_OwonDiagonal(self):
-        self.assertEqual(test_board([["","","O"],["X","O",""],["O","","X"]]), "Player X won!", "Should declare player O won the game with a diagonal line")
+        self.assertEqual(test_board([["","","O"],["X","O",""],["O","","X"]]), "Player O won!", "Should declare player O won the game with a diagonal line")
 
 
 if __name__ == '__main__':

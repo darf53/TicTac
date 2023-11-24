@@ -45,6 +45,15 @@ def test_board(boardpositions):
        (boardpositions[0][2] == boardpositions[1][1] == boardpositions[2][0] != ""):
         # print("Diagonal Win")
         return ("Player {} won!".format(boardpositions[1][1]))
+    
+    # Check if the board is complete
+    boardfull = True
+    for i in range(3):
+        for j in range(3):
+            if boardpositions[i][j] == " ":
+                boardfull = False            
+    if boardfull:
+        return ("Draw! No winner...")
 
 print_board([["","",""],["","",""],["","",""]])
 print_board([["","","O"],["X","O",""],["O","","X"]])

@@ -31,8 +31,12 @@ def print_board(boardpositions):
 
 def test_board(boardpositions):
     for i in range(3):
-        if boardpositions[0][i] == boardpositions[1][i] == boardpositions[2][i]:
+        if boardpositions[0][i] == boardpositions[1][i] == boardpositions[2][i] != "":
             return ("Player {} won!".format(boardpositions[0][i]))
+        
+    for i in range(3):
+        if boardpositions[i][0] == boardpositions[i][1] == boardpositions[i][2] != "":
+            return ("Player {} won!".format(boardpositions[i][0]))
 
 print_board([["","",""],["","",""],["","",""]])
 

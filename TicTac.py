@@ -1,3 +1,5 @@
+import os
+
 def print_board(boardpositions):
     """ this function takes a 3x3 
     2-dimensional list as argument 
@@ -46,15 +48,18 @@ def test_board(boardpositions):
         # print("Diagonal Win")
         return ("Player {} won!".format(boardpositions[1][1]))
     
+def board_full(boardpositions):
     # Check if the board is complete
     boardfull = True
     for i in range(3):
         for j in range(3):
-            if boardpositions[i][j] == " ":
+            if boardpositions[i][j] == "":
                 boardfull = False            
-    if boardfull:
-        return ("Draw! No winner...")
 
-print_board([["","",""],["","",""],["","",""]])
-print_board([["","","O"],["X","O",""],["O","","X"]])
+    return boardfull
+
+if __name__ == '__main__':
+    os.system ('clear')
+    print ("Starting Tic Tac Toe game...")
+
 

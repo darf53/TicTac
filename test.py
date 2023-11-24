@@ -19,8 +19,11 @@ class TestBoard(unittest.TestCase):
     def test_OwonDiagonal(self):
         self.assertEqual(test_board([["","","O"],["X","O",""],["O","","X"]]), "Player O won!", "Should declare player O won the game with a diagonal line")
 
-    def test_endGameDraw(self):
-        self.assertEqual(test_board([["X","O","X"],["O","O","X"],["X","X","O"]]), "Draw! No winner...", "Should declare a draw, no winner.")
+    def test_BoardFullDraw(self):
+        self.assertTrue(board_full([["X","O","X"],["O","O","X"],["X","X","O"]]), "Should declare a draw, no winner.")
+
+    def test_BoardnotFull(self):
+        self.assertFalse(board_full([["X","","X"],["O","O","X"],["X","X","O"]]), "Board not full yet")
 
 
 if __name__ == '__main__':

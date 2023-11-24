@@ -8,7 +8,7 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(print_board([["","",""],["","",""],["","",""]]), " | | \n-+-+-\n | | \n-+-+-\n | | \n", "Should be an empty TicTacToe board")
 
     def test_XwonVert(self):
-        self.assertTrue(test_board([["X","",""],["X","O",""],["X","","O"]]))
+        self.assertEqual(test_board([["X","",""],["X","O",""],["X","","O"]]), "Player X won!", "Should declare player X won the game")
 
 
 if __name__ == '__main__':
